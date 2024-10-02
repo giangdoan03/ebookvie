@@ -94,7 +94,6 @@ if ( ! $product->is_in_stock() ) {
 <?php
 $slug = $post->post_name;
 $domain = esc_url( $_SERVER['HTTP_HOST'] );
-echo $domain; die();
 $field = get_field( 'file_epub' );
 if ( $field ) {
     ?>
