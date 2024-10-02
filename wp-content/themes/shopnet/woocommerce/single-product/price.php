@@ -95,20 +95,26 @@ if ( ! $product->is_in_stock() ) {
 global $post;
 $slug = $post->post_name;
 $domain = $_SERVER['HTTP_HOST'];
-$field = get_field('file_epub');
+
+// Kiểm tra nếu là localhost thì sử dụng http và thêm "ebookvie"
+if($domain == 'localhost'){
+    $url = "http://{$domain}/ebookvie/doc-sach/{$slug}/";
+} else {
+    $url = "https://{$domain}/doc-sach/{$slug}/";
+}
+?>
+    <!-- Liên kết "Đọc sách" luôn hiển thị -->
+    <a href="<?php echo $url; ?>" class="view-book"><i class="fas fa-book"></i> Đọc sách</a>
+
+<?php 
+$field = get_field('ten_file_epub'); // Lấy giá trị từ custom field 'ten_file_epub'
 
 if($field){
-    // Kiểm tra nếu là localhost thì sử dụng http và thêm "ebookvie"
-    if($domain == 'localhost'){
-        $url = "http://{$domain}/ebookvie/doc-sach/{$slug}/";
-    } else {
-        $url = "https://{$domain}/doc-sach/{$slug}/";
-    }
+    // Lấy tên file epub từ custom field
+    $file_epub = basename($field); // Lấy tên file từ đường dẫn (ví dụ: tuoi_tre.epub)
 ?>
-<a href="<?php echo $url; ?>" class="view-book"><i class="fas fa-book"></i> Đọc sách</a>
+    <!-- Chỉ hiển thị liên kết "Đọc online" nếu có file_epub -->
+    <a href="https://file.ebookvie.com/?bookPath=<?php echo $file_epub; ?>" class="view-book"><i class="fas fa-book"></i> Đọc online</a>
 <?php 
 }
 ?>
-
-
-
