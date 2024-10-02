@@ -97,7 +97,10 @@ $domain = esc_url( $_SERVER['HTTP_HOST'] );
 $field = get_field( 'file_epub' );
 if ( $field ) {
     ?>
-    <a href="https://<?php echo esc_url( $domain ); ?>/doc-sach/<?php echo esc_attr( $slug ); ?>/" class="view-book">
+    <a href="<?php echo esc_url( "https://{$domain}/doc-sach/{$slug}/" ); ?>" class="view-book">
         <i class="fas fa-book"></i> Đọc sách
     </a>
+<?php } else { ?>
+    <p>File epub not available for this book.</p>
 <?php } ?>
+
