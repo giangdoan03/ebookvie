@@ -39,7 +39,7 @@ if ($product_posts) {
                     if($domain == 'localhost'){
                         $url = "http://{$domain}/ebookvie/ebook/{$product_post->post_name}/";
                     } else {
-                        $url = "https://{$domain}/ebook/{$slug}/";
+                        $url = "https://{$domain}/ebook/{$product_post->post_name}/";
                     }
                     ?>
                     <a href="<?php echo $url; ?>" class="back-product"><i class="fas fa-arrow-left"></i></a>
