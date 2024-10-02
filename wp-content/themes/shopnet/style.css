@@ -1,0 +1,281 @@
+/*
+Theme Name: Shopnet
+Description: This is a child theme for Flatsome Theme
+Author: UX Themes
+Template: flatsome
+Version: 3.0
+*/
+
+/*************** ADD CUSTOM CSS HERE.   ***************/
+
+
+@media only screen and (max-width: 48em) {
+/*************** ADD MOBILE ONLY CSS HERE  ***************/
+
+
+}
+
+.box-live-demo .right a{
+	cursor:pointer
+	
+}
+.page-template-page-doc-sach #header,
+.page-template-page-doc-sach #footer{
+	display: none;
+}
+#epub-wrapper{
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+.admin-bar #epub-wrapper{
+	height: calc(100vh - 32px);
+}
+#epub-wrapper #titlebar{
+	    align-items: center;
+	    border-bottom: 1px solid rgba(0,0,0,.15);
+	    display: flex;
+	    height: 50px;
+	    justify-content: space-between;
+	    left: 0;
+	    padding: 0 15px;
+	    position: fixed;
+	    right: 0;
+	    text-align: center;
+	    grid-gap: 20px;
+}
+.opener i.fas.fa-arrow-left {
+    margin-right: 20px;
+}
+.full-web i.fas.fa-expand-arrows-alt {
+    margin-left: 20px;
+}
+#epub-wrapper #titlebar .opener{
+	display:flex;
+	align-items: center;
+}
+#epub-wrapper #titlebar .toggle-toc{
+	margin: 0;
+	padding: 0;
+}
+#epub-wrapper .toolbar{
+	    align-items: center;
+    background: #333;
+    bottom: 0;
+    display: flex;
+    height: 40px;
+    justify-content: space-between;
+    left: 0;
+    position: fixed;
+    right: 0;
+}
+#epub-wrapper #epub-reader{
+	scale:90%;
+	display: block;
+	flex: 1;
+	height: calc(100vh - 50px);
+	width: 100%;
+	bottom: 40px;
+	left: 0;
+	overflow: hidden;
+	position: fixed;
+	right: 0;
+	top: 30px;
+	z-index: 2;
+}
+.admin-bar #epub-wrapper #epub-reader{
+	height: calc(100% - 122px);
+	top: 82px;
+}
+#epub-wrapper .toolbar .arrow{
+	color: #e2e2e2;
+	cursor: pointer;
+	font-size: 25px;
+	font-weight: 700;
+	height: 40px;
+	line-height: 40px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+	z-index: 3;
+	width: 120px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#epub-wrapper .toolbar .arrow:hover,
+#epub-wrapper #titlebar .toggle-toc:hover{
+	color:#eb0e86;
+}
+#epub-wrapper #titlebar .book-name{
+	margin: 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-line-clamp: 1;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+}
+#epub-wrapper #titlebar .book-name a{
+	font-size: 16px;
+	color: #333;
+	display: block;
+}
+#epub-wrapper #titlebar .opener a{
+	font-size: 16px;
+	color: #333;
+	display: block;
+}
+#epub-wrapper #titlebar .opener a:hover,
+#epub-wrapper #titlebar .book-name a:hover,
+#epub-wrapper .title-controls .save-book:hover,
+#epub-wrapper .title-controls .full-web:hover
+{
+	color:#eb0e86
+}
+#epub-wrapper #titlebar .title-controls{
+	display:flex;
+	justify-content:flex-end;
+	align-items:center;
+}
+#epub-wrapper .title-controls .save-book{
+	cursor:pointer;
+	color: #333;
+}
+#epub-wrapper .title-controls .full-web{
+	cursor:pointer;
+	color: #333;
+}
+#epub-wrapper .toc-reader{
+	position: fixed;
+	width: 315px;
+	height: 100%;
+	overflow-y: auto;
+	background: #6b6b6b;
+	z-index: 9;
+	display: flex;
+	flex-direction: column;
+}
+#epub-wrapper .toc-reader .toc-header{
+	display: flex;
+	justify-content: space-between;
+	background: #eae8de;
+	box-shadow: 0 1px 3px rgba(0,0,0,.6);
+	height: 50px;
+	line-height: 50px;
+	padding: 0 16px;
+	width: 100%;
+}
+#epub-wrapper .toc-reader .close-toc{
+	font-size: 18px;
+}
+#epub-wrapper .toc-reader .toc-content{
+	flex:1;
+	overflow-y:auto;
+	padding: 5px 0 5px 1rem;
+	color: #fff;
+}
+#epub-wrapper .toc-reader .toc-content div{
+	font-size: 15px;
+	padding: 5px 0;
+	display: block;
+	cursor: pointer;
+}
+#epub-wrapper .toc-reader .toc-content div:hover{
+	text-decoration:underline
+}
+.view-book{
+	display: flex;
+	background:linear-gradient(to right, #e31587 , #8112b9);
+	height: 50px;
+	align-items: center;
+	color: #fff !important;
+	margin-bottom: 12px;
+	border-radius: 4px;
+	justify-content: center;
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.product-info i.fas.fa-book {
+    margin-right: 15px;
+}
+.book-wrapper{
+	padding:80px 0
+}
+.book-wrapper h1{
+	font-size: 28px;
+	margin-bottom: 30px;
+}
+.book-wrapper  #list-book{
+	display: grid;
+	grid-template-columns: repeat(5,1fr);
+	grid-gap: 20px;
+}
+.book-wrapper .page-numbers{
+	margin-top:30px
+}
+.book-wrapper  #list-book .image-cover{
+	padding-top:150%;
+}
+.book-wrapper  #list-book .box-book{
+	background: white;
+    box-shadow: 2px 2px 20px #0000002b;
+    border-radius: 5px;
+	overflow:hidden
+}
+.book-wrapper  #list-book .box-book .box-text{
+	padding-left: 10px;
+    padding-right: 10px;
+}
+
+.book-wrapper  #list-book .box-book .book-name{
+	font-size: 15px;
+	text-align: center;
+	font-weight: normal;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-line-clamp: 2;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	height: 40px;
+}
+.book-wrapper  #list-book .box-book .remove-favorite{
+	border-radius: 4px;
+	margin: 0 auto 20px;
+	height: 32px;
+	width: fit-content;
+	text-transform: none;
+	min-height: unset;
+	font-size: 14px;
+	font-weight: normal;
+	border-radius: 4px;
+	border: 1px solid #020202;
+	padding: 0 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.book-wrapper  #list-book .box-book .remove-favorite:hover{
+	background-color: var(--fs-color-alert);
+	color: #fff;
+	border-color: var(--fs-color-alert);
+}
+@media screen and (max-width: 849.98px) {
+	.book-wrapper  #list-book{
+	grid-template-columns: repeat(4,1fr);
+	}
+	.admin-bar #epub-wrapper #epub-reader {
+	    height: calc(100% - 50px);
+	    top: 50px;
+	}
+}
+@media screen and (max-width: 767.98px) {
+	.book-wrapper{
+		padding:50px 0
+	}
+	.book-wrapper  #list-book{
+	grid-template-columns: repeat(2,1fr);
+	grid-gap: 20px;
+	}
+}

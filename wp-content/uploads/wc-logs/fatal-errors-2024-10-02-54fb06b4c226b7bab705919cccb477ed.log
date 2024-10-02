@@ -1,0 +1,20 @@
+2024-10-02T03:23:20+00:00 CRITICAL Uncaught Error: Call to a member function get_id() on null in C:\laragon\www\ebookvie\wp-content\themes\shopnet\woocommerce\single-product\price.php:48
+Stack trace:
+#0 C:\laragon\www\ebookvie\wp-content\plugins\woocommerce\includes\wc-core-functions.php(345): include()
+#1 C:\laragon\www\ebookvie\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1655): wc_get_template('single-product/...')
+#2 C:\laragon\www\ebookvie\wp-includes\class-wp-hook.php(324): woocommerce_template_single_price('')
+#3 C:\laragon\www\ebookvie\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\laragon\www\ebookvie\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\laragon\www\ebookvie\wp-content\themes\shopnet\woocommerce\single-product\layouts\product-right-sidebar.php(93): do_action('woocommerce_sin...')
+#6 C:\laragon\www\ebookvie\wp-includes\template.php(812): require('C:\\laragon\\www\\...')
+#7 C:\laragon\www\ebookvie\wp-content\plugins\woocommerce\includes\wc-core-functions.php(284): load_template('C:\\laragon\\www\\...', false)
+#8 C:\laragon\www\ebookvie\wp-content\themes\flatsome\woocommerce\content-single-product.php(42): wc_get_template_part('single-product/...', 'right-sidebar')
+#9 C:\laragon\www\ebookvie\wp-includes\template.php(812): require('C:\\laragon\\www\\...')
+#10 C:\laragon\www\ebookvie\wp-content\plugins\woocommerce\includes\wc-core-functions.php(284): load_template('C:\\laragon\\www\\...', false)
+#11 C:\laragon\www\ebookvie\wp-content\themes\flatsome\woocommerce\single-product.php(39): wc_get_template_part('content', 'single-product')
+#12 C:\laragon\www\ebookvie\wp-includes\template-loader.php(106): include('C:\\laragon\\www\\...')
+#13 C:\laragon\www\ebookvie\wp-blog-header.php(19): require_once('C:\\laragon\\www\\...')
+#14 C:\laragon\www\ebookvie\index.php(17): require('C:\\laragon\\www\\...')
+#15 {main}
+  thrown in C:\laragon\www\ebookvie\wp-content\themes\shopnet\woocommerce\single-product\price.php on line 48
+
