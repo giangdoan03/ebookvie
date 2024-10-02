@@ -91,16 +91,13 @@ if ( ! $product->is_in_stock() ) {
     </div>
 </div>
 
-<?php
+<?php 
+global $post;
 $slug = $post->post_name;
-$domain = esc_url( $_SERVER['HTTP_HOST'] );
-$field = get_field( 'file_epub' );
-if ( $field ) {
-    ?>
-    <a href="<?php echo esc_url( "$domain/doc-sach/{$slug}/" ); ?>" class="view-book">
-        <i class="fas fa-book"></i> Đọc sách
-    </a>
-<?php } else { ?>
-    <p>File epub not available for this book.</p>
+$domain = $_SERVER['HTTP_HOST'];
+$field = get_field('file_epub');
+if($field){
+?>
+<a href="https://<?php echo $domain;?>/doc-sach/<?php echo $slug;?>/" class="view-book"><i class="fas fa-book"></i> Đọc sách</a>
 <?php } ?>
 
