@@ -96,8 +96,19 @@ global $post;
 $slug = $post->post_name;
 $domain = $_SERVER['HTTP_HOST'];
 $field = get_field('file_epub');
+
 if($field){
+    // Kiểm tra nếu là localhost thì sử dụng http và thêm "ebookvie"
+    if($domain == 'localhost'){
+        $url = "http://{$domain}/ebookvie/doc-sach/{$slug}/";
+    } else {
+        $url = "https://{$domain}/doc-sach/{$slug}/";
+    }
 ?>
-<a href="https://<?php echo $domain;?>/doc-sach/<?php echo $slug;?>/" class="view-book"><i class="fas fa-book"></i> Đọc sách</a>
-<?php } ?>
+<a href="<?php echo $url; ?>" class="view-book"><i class="fas fa-book"></i> Đọc sách</a>
+<?php 
+}
+?>
+
+
 
