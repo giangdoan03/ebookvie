@@ -107,7 +107,7 @@ if($domain == 'localhost'){
     <a href="<?php echo $url; ?>" class="view-book"><i class="fas fa-book"></i> Đọc sách</a>
 
 <?php 
-$field = get_field('ten_file_epub'); // Lấy giá trị từ custom field 'ten_file_epub'
+$field = get_field('epub_file_name'); // Lấy giá trị từ custom field 'epub_file_name'
 
 if($field){
     // Lấy tên file epub từ custom field
