@@ -31,10 +31,21 @@ if ($product_posts) {
             <div>xxxxxxxxxx</div>
             <div id="epub-wrapper">
                 <div id="titlebar">
-                    <div class="opener">
-                        <a href="https://<?php echo $domain; ?>/ebook/<?php echo $slug; ?>/" class="back-product"><i class="fas fa-arrow-left"></i></a>
-                        <button class="toggle-toc"><i class="fas fa-bars"></i></button>
-                    </div>
+                <div class="opener">
+                    <?php 
+                    $domain = $_SERVER['HTTP_HOST'];
+                    $slug = $post->post_name;
+                    // Kiểm tra nếu là localhost thì thêm "ebookvie" vào đường dẫn
+                    if($domain == 'localhost'){
+                        $url = "http://{$domain}/ebookvie/ebook/{$product_post->post_name}/";
+                    } else {
+                        $url = "https://{$domain}/ebook/{$slug}/";
+                    }
+                    ?>
+                    <a href="<?php echo $url; ?>" class="back-product"><i class="fas fa-arrow-left"></i></a>
+                    <button class="toggle-toc"><i class="fas fa-bars"></i></button>
+                </div>
+
                     <div class="metainfo">
                         <h1 class="book-name"><a href="https://<?php echo $domain; ?>/ebook/<?php echo $slug; ?>/"><?php echo $product_post->post_title; ?></a></h1>
                     </div>
