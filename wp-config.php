@@ -20,13 +20,13 @@
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'ebookvie' );
+define( 'DB_NAME', 'oksqpeoc_wp430' );
 
 /** Database username */
-define( 'DB_USER', 'root' );
+define( 'DB_USER', 'oksqpeoc_wp430' );
 
 /** Database password */
-define( 'DB_PASSWORD', '' );
+define( 'DB_PASSWORD', '7RrZ9v3J)yyvvMK$*cJKmvAa' );
 
 /** Database hostname */
 define( 'DB_HOST', 'localhost' );
